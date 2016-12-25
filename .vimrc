@@ -114,10 +114,11 @@ set clipboard=unnamed
 set number
 set numberwidth=1
 set backspace=indent,eol,start
+set background=dark
+set tabstop=4
+set cursorline
 highlight LineNR ctermfg=109
 highlight Cursor ctermfg=15
 highlight iCursor ctermfg=15
-set background=dark
-set tabstop=4
 syntax on
 inoremap <silent> jj <ESC>
