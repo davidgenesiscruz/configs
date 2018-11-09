@@ -1,0 +1,30 @@
+{
+  "settingsVersion": "1.64",
+  "exclusionRules": [
+    {
+      "pattern": "https?://calendar.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://inbox.google.com/*",
+      "passKeys": ""
+    }
+  ],
+  "filterLinkHints": false,
+  "waitForEnterForFilteredHints": true,
+  "hideHud": false,
+  "keyMappings": "map h goBack\nmap l goForward\nmap H previousTab\nmap L nextTab\nmap <c-p> togglePinTab\nmap J scrollLeft\nmap K scrollRight\nmap <c-j> scrollToLeft\nmap <c-k> scrollToRight\nmap d scrollFullPageDown\nmap e scrollFullPageUp\nmap F LinkHints.activateModeToOpenInNewForegroundTab\nmap <c-F> LinkHints.activateModeToOpenInNewTab\nmap <c-f> LinkHints.activateModeWithQueue\nmap <c-d> LinkHints.activateModeToDownloadLink\nmap ch closeTabsOnLeft\nmap cl closeTabsOnRight\nmap C closeOtherTabs\nunmap u\nunmap zH\nunmap zL\nunmap <a-p>\nunmap <a-f>",
+  "linkHintCharacters": "sadfjklewcmpgh",
+  "linkHintNumbers": "0123456789",
+  "newTabUrl": "about:newtab",
+  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
+  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
+  "regexFindMode": false,
+  "ignoreKeyboardLayout": false,
+  "scrollStepSize": 60,
+  "smoothScroll": true,
+  "grabBackFocus": false,
+  "searchEngines": "w: http://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\ni: https://isohunt.to/torrents/?ihq=%s isohunt\ny: http://www.youtube.com/results?search_query=%s Youtube\nm: https://www.google.com/maps?q=%s Google maps\nj: http://jira.bizreach.co.jp/browse/CT-%s キャリアトレックJIRA\njs: http://jira.bizreach.co.jp/browse/CTH-%s キャリアトレックサービスデスクJIRA\njf: http://jira.bizreach.co.jp/issues/?filter=%s キャリアトレックJIRA Filters\njw: http://wiki.bizreach.co.jp/dosearchsite.action?queryString=%s キャリアトレックWIKI検索\njp: http://wiki.bizreach.co.jp/pages/viewpage.action?pageId=%s キャリアトレックWIKIページ\nc: http://caniuse.com/#search=%s CanIUse?\ndc: https://admin.demotrek.com/candidate/view?id=%s&fw=&cn= Demotrek Admin求職者詳細\ndj: https://admin.demotrek.com/job/view?id=%s Demotrek Admin求人詳細",
+  "searchUrl": "https://www.google.com/search?q=",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF785),\n  color-stop(100%,#FFC542));\nborder: 1px solid #E3BE23;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: black;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
+}
