@@ -1,6 +1,5 @@
 #!/bin/bash
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home"
-export PAHT="/usr/local/bin:$PATH"
 export CAREERTREK_ROOT_PATH=/Users/david.genesis.cruz/Documents/dev/workspaces/careertrek
 
 alias goDavide="cd $HOME/Documents/dev/workspaces/careertrek/"
@@ -49,6 +48,23 @@ function startDocker() {
 		cd $origDir
 	fi
 }
+
+function is_dirty_git() {
+	git diff-index --quiet HEAD -- || return 0
+	return 1
+}
+
+function update_configs() {
+	echo "Updating configurations..."
+	cd ~/Documents/configs/
+	cp ~/.vimrc ~/.tmux.conf ~/.profile .
+	if is_dirty_git
+	then
+		git diff
+		git commit -a
+		git push
+	fi
+}	
 
 function startUp() {
 	echo "Hi "$USER"! What do you want me to do today?"
@@ -147,6 +163,8 @@ function attach_tmux_session() {
 		fi
 	fi
 }
+
+update_configs
 
 if is_tmux_running
 	then startUp
