@@ -61,7 +61,8 @@ function update_configs() {
 	if is_dirty_git
 	then
 		git diff
-		git commit -a
+        git add .
+		git commit
 		git push
 	fi
 	cd -
