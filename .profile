@@ -64,6 +64,9 @@ function update_configs() {
 		git commit -a
 		git push
 	fi
+	cd -
+
+	echo
 }	
 
 function startUp() {
