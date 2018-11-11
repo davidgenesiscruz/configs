@@ -167,10 +167,8 @@ function attach_tmux_session() {
 	fi
 }
 
-update_configs
-
 if is_tmux_running
-	then startUp
+	then update_configs;startUp
 	else attach_tmux_session
 fi
 
