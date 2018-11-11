@@ -57,7 +57,7 @@ function is_dirty_git() {
 function update_configs() {
 	echo "Updating configurations..."
 	cd ~/Documents/configs/
-	cp ~/.vimrc ~/.tmux.conf ~/.profile .
+	cp ~/.vimrc ~/.tmux.conf ~/.profile ~/.config/karabiner/karabiner.json .
 	if is_dirty_git
 	then
 		git diff
