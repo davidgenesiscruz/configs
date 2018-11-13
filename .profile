@@ -49,6 +49,7 @@ function startDocker() {
 }
 
 function is_dirty_git() {
+    git add .
     git diff-index --quiet HEAD -- || return 0
     return 1
 }
