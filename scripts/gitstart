@@ -1,0 +1,12 @@
+#!/bin/bash
+
+date '+[Fetched on %Y/%m/%d %H:%M]'
+basename $(pwd)
+echo
+git fetch
+git status
+echo "Your recent commits:"
+git log -10 --committer="david.genesis.cruz" --pretty=oneline --abbrev-commit --remotes
+echo
+echo "Your local branches:"
+git branch

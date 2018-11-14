@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd ~/Documents/dev/workspaces/
+gits=($(ls -d */))
+
+echo "Which repository do you want to load?"
+for i in "${!gits[@]}"
+do
+	if [ $i -ne 0 ]
+		then echo "$i.) ${gits[$i]}"
+	fi	
+done
+read choice
+
+cd ${gits[$choice]}
