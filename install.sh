@@ -29,6 +29,12 @@ sh ./installer.sh ~/.cache/dein
 ## neovim
 pip3 install neovim
 
+## reconfigure vim
+brew remove vim
+brew cleanup
+brew install vim
+vim "+call dein#install()" +qall &
+
 ## gcalcli
 git clone https://github.com/insanum/gcalcli.git
 cd gcalcli
