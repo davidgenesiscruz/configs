@@ -3,6 +3,7 @@
 - .profile
 - .vimrc
 - .tmux.conf
+- .ideavimrc
 ## ~/.config/karabiner
 - karabiner.json
 ## Vimium

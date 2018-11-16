@@ -6,6 +6,7 @@ open https://bahoom.com/hyperswitch
 open https://developer.apple.com/xcode/
 open https://pqrs.org/osx/karabiner/
 open https://store.docker.com/editions/community/docker-ce-desktop-mac
+open https://clipy-app.com/
 
 # Installations
 ## Homebrew

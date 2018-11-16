@@ -78,7 +78,7 @@ function startUp() {
         1) while true;do clear;agenda;sleep 60;done;;
         2) . /usr/local/bin/whichgit;while true;do clear;gitstart;sleep 60;done;;
         3) ~/Desktop/tasker 30;;
-        0) startDocker
+        # 0) startDocker
     esac
 
     clear
