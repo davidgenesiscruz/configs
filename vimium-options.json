@@ -1,13 +1,17 @@
 {
-  "settingsVersion": "1.64",
+  "settingsVersion": "1.64.2",
   "exclusionRules": [
     {
       "pattern": "https?://calendar.google.com/*",
-      "passKeys": ""
+      "passKeys": "pknjtgcezdwmxay/Cqs?.,"
     },
     {
       "pattern": "https?://inbox.google.com/*",
-      "passKeys": ""
+      "passKeys": "c/iqhtBMzoujknpey][sPaArRf#!m.xX"
+    },
+    {
+      "pattern": "https?://www.netflix.com/watch/*",
+      "passKeys": "asdzxcfv"
     }
   ],
   "filterLinkHints": false,
@@ -24,7 +28,7 @@
   "scrollStepSize": 60,
   "smoothScroll": true,
   "grabBackFocus": false,
-  "searchEngines": "w: http://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\ni: https://isohunt.to/torrents/?ihq=%s isohunt\ny: http://www.youtube.com/results?search_query=%s Youtube\nm: https://www.google.com/maps?q=%s Google maps\nj: http://jira.bizreach.co.jp/browse/CT-%s キャリアトレックJIRA\njs: http://jira.bizreach.co.jp/browse/CTH-%s キャリアトレックサービスデスクJIRA\njf: http://jira.bizreach.co.jp/issues/?filter=%s キャリアトレックJIRA Filters\njw: http://wiki.bizreach.co.jp/dosearchsite.action?queryString=%s キャリアトレックWIKI検索\njp: http://wiki.bizreach.co.jp/pages/viewpage.action?pageId=%s キャリアトレックWIKIページ\nc: http://caniuse.com/#search=%s CanIUse?\ndc: https://admin.demotrek.com/candidate/view?id=%s&fw=&cn= Demotrek Admin求職者詳細\ndj: https://admin.demotrek.com/job/view?id=%s Demotrek Admin求人詳細",
+  "searchEngines": "w: http://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\ni: https://isohunt.to/torrents/?ihq=%s isohunt\ny: http://www.youtube.com/results?search_query=%s Youtube\nm: https://www.google.com/maps?q=%s Google maps\nc: http://caniuse.com/#search=%s CanIUse?\np: https://www.amazon.co.jp/s/ref=nb_sb_noss_2?url=search-alias%3Dinstant-video&field-keywords=%s Prime Video\nn: https://www.netflix.com/search?q=%s Netflix",
   "searchUrl": "https://www.google.com/search?q=",
-  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF785),\n  color-stop(100%,#FFC542));\nborder: 1px solid #E3BE23;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: black;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc),\n  color-stop(100%,#5f5f5f));\nborder: 1px solid #505050;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: #efefef;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
 }
