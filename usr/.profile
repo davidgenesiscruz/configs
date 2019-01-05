@@ -31,20 +31,6 @@ function startDocker() {
             sleep 1
             ((sleepSecs++))
         done
-    
-        origDir=$(pwd)
-        cd ~/Documents/dev/workspaces/careertrek2/
-        docker-compose up -d
-        echo
-        # sleep 2
-        # cd ~/Documents/dev/workspaces/re-careertrek/recruiting-docker/
-        # docker-compose up -d
-        # echo
-        # sleep 2
-        # cd ~/Documents/dev/workspaces/re-careertrek/rct-tools/
-        # node scripts/setup-sqs.js
-        # echo
-        cd $origDir
     fi
 }
 
@@ -56,8 +42,6 @@ function is_dirty_git() {
 
 function update_configs() {
     echo "Updating configurations..."
-    cd ~/Documents/configs/
-    cp ~/.vimrc ~/.tmux.conf ~/.profile ~/.config/karabiner/karabiner.json .
     if is_dirty_git
     then
         git diff
@@ -165,7 +149,7 @@ function attach_tmux_session() {
 }
 
 if is_tmux_running
-    then update_configs;echo;startUp
+    then echo #update_configs;echo;startUp
     else attach_tmux_session
 fi
 
