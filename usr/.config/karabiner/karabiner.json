@@ -286,6 +286,17 @@
             "selected": true,
             "simple_modifications": [
                 {
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 1452,
+                                    "product_id": 620
+                                }
+                            ]
+                        }
+                    ],
                     "from": {
                         "key_code": "caps_lock"
                     },
@@ -294,6 +305,17 @@
                     }
                 },
                 {
+                    "conditions": [
+                        {
+                            "type": "device_if",
+                            "identifiers": [
+                                {
+                                    "vendor_id": 1452,
+                                    "product_id": 620
+                                }
+                            ]
+                        }
+                    ],
                     "from": {
                         "key_code": "left_control"
                     },
