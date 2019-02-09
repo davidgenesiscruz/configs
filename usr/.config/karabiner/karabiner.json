@@ -24,6 +24,10 @@
                                             {
                                                 "product_id": 620,
                                                 "vendor_id": 1452
+                                            },
+                                            {
+                                                "product_id": 599,
+                                                "vendor_id": 1452
                                             }
                                         ],
                                         "type": "device_if"
@@ -34,9 +38,6 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
-                                        ],
-                                        "optional": [
-                                            "any"
                                         ]
                                     }
                                 },
@@ -59,6 +60,10 @@
                                             {
                                                 "product_id": 620,
                                                 "vendor_id": 1452
+                                            },
+                                            {
+                                                "product_id": 599,
+                                                "vendor_id": 1452
                                             }
                                         ],
                                         "type": "device_if"
@@ -69,15 +74,51 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn"
-                                        ],
-                                        "optional": [
-                                            "any"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
                                         "key_code": "japanese_kana"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change shift + fn + right_option to traditional chinese",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "product_id": 620,
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "product_id": 599,
+                                                "vendor_id": 1452
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift",
+                                            "fn"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "select_input_source": {
+                                           "input_source_id": "^com\\.apple\\.inputmethod\\.TCIM\\.Pinyin$"
+                                        }
                                     }
                                 ],
                                 "type": "basic"
