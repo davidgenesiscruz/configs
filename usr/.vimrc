@@ -26,6 +26,9 @@ syntax enable
 let g:deoplete#enable_at_startup = 1
 " end dein.vim/deoplete.nvim settings
 
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 set title
 set clipboard=unnamed
 set number
