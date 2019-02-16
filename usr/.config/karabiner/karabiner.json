@@ -43,7 +43,9 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "japanese_eisuu"
+                                        "select_input_source": {
+                                            "input_source_id": "^com\\.google\\.inputmethod\\.Japanese\\.Roman$"
+                                        }
                                     }
                                 ],
                                 "type": "basic"
@@ -79,7 +81,9 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "japanese_kana"
+                                        "select_input_source": {
+                                            "input_source_id": "^com\\.google\\.inputmethod\\.Japanese\\.base$"
+                                        }
                                     }
                                 ],
                                 "type": "basic"
