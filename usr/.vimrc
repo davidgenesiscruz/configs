@@ -29,6 +29,7 @@ let g:deoplete#enable_at_startup = 1
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
+set encoding=utf-8
 set title
 set clipboard=unnamed
 set number
