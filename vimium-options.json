@@ -1,5 +1,5 @@
 {
-  "settingsVersion": "1.64.3",
+  "settingsVersion": "1.64.5",
   "exclusionRules": [
     {
       "pattern": "https?://calendar.google.com/*",
@@ -28,7 +28,7 @@
   "scrollStepSize": 60,
   "smoothScroll": true,
   "grabBackFocus": false,
-  "searchEngines": "w: http://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\ni: https://isohunt.to/torrents/?ihq=%s isohunt\ny: http://www.youtube.com/results?search_query=%s Youtube\nm: https://www.google.com/maps?q=%s Google maps\nc: http://caniuse.com/#search=%s CanIUse?\np: https://www.amazon.co.jp/s/ref=nb_sb_noss_2?url=search-alias%3Dinstant-video&field-keywords=%s Prime Video\nn: https://www.netflix.com/search?q=%s Netflix",
+  "searchEngines": "w: http://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\ni: https://isohunt.to/torrents/?ihq=%s isohunt\ny: http://www.youtube.com/results?search_query=%s Youtube\nm: https://www.google.com/maps?q=%s Google maps\nc: http://caniuse.com/#search=%s CanIUse?\na: https://www.amazon.co.jp/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=%s Amazon Prime\np: https://www.amazon.co.jp/s/ref=nb_sb_noss_2?url=search-alias%3Dinstant-video&field-keywords=%s Prime Video\nn: https://www.netflix.com/search?q=%s Netflix",
   "searchUrl": "https://www.google.com/search?q=",
   "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0c0c0),\n  color-stop(100%,#5f5f5f));\nborder: 1px solid #505050;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: #efefef;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\ncolor: #808080;\n}"
 }
