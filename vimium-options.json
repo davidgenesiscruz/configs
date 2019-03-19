@@ -12,12 +12,16 @@
     {
       "pattern": "https?://www.netflix.com/watch/*",
       "passKeys": "asdzxcfv"
+    },
+    {
+      "pattern": "https?://www.youtube.com/*",
+      "passKeys": "f"
     }
   ],
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "map h goBack\nmap l goForward\nmap H previousTab\nmap L nextTab\nmap <c-p> togglePinTab\nmap <c-j> scrollLeft\nmap <c-k> scrollRight\nmap <c-J> scrollToLeft\nmap <c-K> scrollToRight\nmap <c-d> scrollDown\nmap <c-e> scrollUp\nmap J scrollFullPageDown\nmap K scrollFullPageUp\nmap F LinkHints.activateModeToOpenInNewForegroundTab\nmap <c-F> LinkHints.activateModeToOpenInNewTab\nmap <c-f> LinkHints.activateModeWithQueue\nmap d LinkHints.activateModeToDownloadLink\nmap ch closeTabsOnLeft\nmap cl closeTabsOnRight\nmap C closeOtherTabs\nunmap u\nunmap zH\nunmap zL\nunmap <a-p>\nunmap <a-f>\nunmap <c-y>",
+  "keyMappings": "map h goBack\nmap l goForward\nmap H previousTab\nmap L nextTab\nmap <c-p> togglePinTab\nmap <c-j> scrollLeft\nmap <c-k> scrollRight\nmap <c-J> scrollToLeft\nmap <c-K> scrollToRight\nmap <c-d> scrollDown\nmap <c-e> scrollUp\nmap J scrollFullPageDown\nmap K scrollFullPageUp\nmap F LinkHints.activateModeToOpenInNewForegroundTab\nmap <c-F> LinkHints.activateModeToOpenInNewTab\nmap <c-f> LinkHints.activateModeWithQueue\nmap D LinkHints.activateModeToDownloadLink\nmap ch closeTabsOnLeft\nmap cl closeTabsOnRight\nmap C closeOtherTabs\nunmap u\nunmap zH\nunmap zL\nunmap <a-p>\nunmap <a-f>\nunmap <c-y>",
   "linkHintCharacters": "sadfjklewcmpgh",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
