@@ -42,5 +42,8 @@ python setup.py install
 cd ..
 rm -rf gcalcli
 
+## imagemagick
+brew install imagemagick
+
 # Instructions
 echo 'Modify KeySetting_Default.plist within /System/Library/Input Methods/JapaneseIM.app for space and half-width space'
