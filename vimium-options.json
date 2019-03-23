@@ -14,7 +14,7 @@
       "passKeys": "asdzxcfv"
     },
     {
-      "pattern": "https?://www.youtube.com/*",
+      "pattern": "https?://www.youtube.com/watch*",
       "passKeys": "f"
     }
   ],
