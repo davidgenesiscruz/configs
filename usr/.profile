@@ -1,6 +1,7 @@
 #!/bin/bash
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home"
 export CAREERTREK_ROOT_PATH=/Users/david.genesis.cruz/Documents/dev/workspaces/careertrek
+export LSCOLORS=ca
 
 alias ll="ls -laAG"
 alias ls="ls -aAG"
