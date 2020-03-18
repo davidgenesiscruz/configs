@@ -11,6 +11,7 @@ alias ls="ls -aAG"
 alias preview="qlmanage -p"
 alias reload="source ~/.zprofile"
 alias clearCache="rm -rf /Library/Caches/* /Library/Logs/* ~/Library/Caches/* ~/Library/Logs/*"
+alias rm="rm -i"
 
 eval "$(nodenv init -)"
 
