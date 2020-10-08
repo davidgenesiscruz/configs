@@ -1,40 +1,20 @@
-#!/bin/bash
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home"
-export CAREERTREK_ROOT_PATH=/Users/david.genesis.cruz/Documents/dev/workspaces/careertrek
-export LSCOLORS=ca
+#!/bin/zsh
+setopt NULL_GLOB
+
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home"
+export ANDROID_HOME=/Users/$USER/Library/Android/sdk
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export LSCOLORS="gxfxcxdxbxegedabagacad"
 
 alias ll="ls -laAG"
 alias ls="ls -aAG"
-alias reload="source ~/.profile"
+alias preview="qlmanage -p"
+alias reload="source ~/.zprofile"
+alias clearCache="rm -rf /Library/Caches/* /Library/Logs/* ~/Library/Caches/* ~/Library/Logs/*"
+
+eval "$(nodenv init -)"
 
 #Welcome Screen
-function isDockerDead() {
-    if [ ! $(pgrep -f docker > /dev/null) ]
-        then return 0
-        else return 1
-    fi
-}
-
-function dockerProcessCount() {
-    return $(( $(docker ps | wc -l) ))
-}
-
-function startDocker() {
-    if (( dockerProcessCount <= 0 ))
-    then
-        sleepSecs=0
-        while [ ! isDockerDead ]
-        do
-            if [ $(($sleepSecs % 5)) -eq 0 ]
-                then echo "Waiting for Docker to start..."
-            fi
-            echo sleeping...
-            sleep 1
-            ((sleepSecs++))
-        done
-    fi
-}
-
 function is_dirty_git() {
     git add .
     git diff-index --quiet HEAD -- || return 0
@@ -63,7 +43,6 @@ function startUp() {
         1) while true;do clear;agenda;sleep 60;done;;
         2) . /usr/local/bin/whichgit;while true;do clear;gitstart;sleep 60;done;;
         3) ~/Desktop/tasker 30;;
-        # 0) startDocker
     esac
 
     clear
@@ -153,6 +132,4 @@ if is_tmux_running
     then echo #update_configs;echo;startUp
     else attach_tmux_session
 fi
-
-source /Users/david.genesis.cruz/Documents/dev/workspaces/careertrek/careertrek_bash_complete.bash
 
