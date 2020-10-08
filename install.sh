@@ -25,6 +25,7 @@ brew install tmux
 mkdir -p ~/.cache/dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/.cache/dein
+rm ./installer.sh
 
 ## neovim
 pip3 install neovim
@@ -33,7 +34,6 @@ pip3 install neovim
 brew remove vim
 brew cleanup
 brew install vim
-vim "+call dein#install()" +qall &
 
 ## gcalcli
 git clone https://github.com/insanum/gcalcli.git

@@ -23,10 +23,11 @@ endif
 filetype plugin indent on
 syntax enable
 
-let g:deoplete#enable_at_startup = 1
-" end dein.vim/deoplete.nvim settings
+if dein#check_install()
+  call dein#install()
+endif
+" end dein settings
 
-filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
 set encoding=utf-8
