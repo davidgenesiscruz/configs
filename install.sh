@@ -1,11 +1,8 @@
 # Downloads
-open https://www.google.com/chrome/
-open https://www.mozilla.org/en-US/firefox/developer/
+open https://brave.com/download/
 open https://qsapp.com/download.php
 open https://bahoom.com/hyperswitch
-open https://developer.apple.com/xcode/
 open https://pqrs.org/osx/karabiner/
-open https://store.docker.com/editions/community/docker-ce-desktop-mac
 open https://clipy-app.com/
 
 # Installations
