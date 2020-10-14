@@ -11,7 +11,9 @@ alias ls="ls -aAG"
 alias preview="qlmanage -p"
 alias reload="source ~/.zprofile"
 alias clearCache="rm -rf /Library/Caches/* /Library/Logs/* ~/Library/Caches/* ~/Library/Logs/*"
-alias rm="rm -i"
+alias rm="rm -v"
+alias mv="mv -v"
+alias cp="cp -v"
 
 toMp3() {
     ffmpeg -i "$1" -vn -c:a libmp3lame -b:a 256k "${1%.*}.mp3"
