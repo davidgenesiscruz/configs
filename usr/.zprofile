@@ -13,6 +13,10 @@ alias reload="source ~/.zprofile"
 alias clearCache="rm -rf /Library/Caches/* /Library/Logs/* ~/Library/Caches/* ~/Library/Logs/*"
 alias rm="rm -i"
 
+toMp3() {
+    ffmpeg -i "$1" -vn -c:a libmp3lame -b:a 256k "${1%.*}.mp3"
+}
+
 eval "$(nodenv init -)"
 
 #Welcome Screen
