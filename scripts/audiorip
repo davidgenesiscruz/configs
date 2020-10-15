@@ -1,0 +1,45 @@
+#!/bin/zsh
+
+# TODO check for '--'
+album=${@: -1}
+
+[[ ! -a cover.png ]] && echo "cover.png missing"; exit 1
+[[ ! -a tracks ]] && echo "tracks missing"; exit 1
+
+mkdir $album
+mv cover.png $album
+mv tracks $album
+
+cd $album
+echo ";FFMETADATA1" > metadata
+echo "TALB="$album >> metadata
+
+# TODO check for missing options
+# convert to zparseopts
+while getopts 's:c:l:g:y:' opt
+do
+    case $opt in
+        s) echo "TPE1="$OPTARG >> metadata;;
+        c) echo "TCOM="$OPTARG >> metadata;;
+        l) echo "TEXT="$OPTARG >> metadata;;
+        g) echo "GENRE="$OPTARG >> metadata;;
+        y) echo "DATE="$OPTARG >> metadata;;
+    esac
+done
+
+for audio in /Volumes/Audio\ CD/*
+do
+    track=`echo $audio | sed 's/.*\///;s/ .*//'`
+    title=`sed "0${track}q;d" "tracks"`
+    ffmpeg -i "$audio" -i "metadata" -i "cover.png" \
+        -map 0 -map_metadata 1 -map 2 \
+        -b:a 256k -c:a libmp3lame -c:v copy \
+        -metadata TIT2="$title" -metadata TRCK="$track" \
+        -metadata:s:v title="Picture" "$track $title.mp3"
+done
+
+rm metadata
+rm cover.png
+rm tracks
+
+diskutil eject disk4
