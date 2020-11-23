@@ -3,10 +3,12 @@
 # TODO check for '--'
 album=${@: -1}
 
-[[ ! -a cover.png ]] && echo "cover.png missing"; exit 1
-[[ ! -a tracks ]] && echo "tracks missing"; exit 1
+echo "Ripping $album..."
 
-mkdir $album
+! [[ -a cover.png ]] && echo "cover.png missing" && exit 1
+! [[ -a tracks ]] && echo "tracks missing" && exit 1
+
+[ ! -d $album ] && mkdir $album
 mv cover.png $album
 mv tracks $album
 
@@ -16,7 +18,7 @@ echo "TALB="$album >> metadata
 
 # TODO check for missing options
 # convert to zparseopts
-while getopts 's:c:l:g:y:' opt
+while getopts 's:c:l:g:y:p:' opt
 do
     case $opt in
         s) echo "TPE1="$OPTARG >> metadata;;
@@ -24,18 +26,23 @@ do
         l) echo "TEXT="$OPTARG >> metadata;;
         g) echo "GENRE="$OPTARG >> metadata;;
         y) echo "DATE="$OPTARG >> metadata;;
+        p) echo "TPOS="$OPTARG >> metadata;part=${OPTARG%/*};
     esac
 done
+
+vim metadata
 
 for audio in /Volumes/Audio\ CD/*
 do
     track=`echo $audio | sed 's/.*\///;s/ .*//'`
     title=`sed "0${track}q;d" "tracks"`
+    filename="$track $title.mp3"
+    [[ -v $part ]] && filename="$part-$filename"
     ffmpeg -i "$audio" -i "metadata" -i "cover.png" \
         -map 0 -map_metadata 1 -map 2 \
         -b:a 256k -c:a libmp3lame -c:v copy \
         -metadata TIT2="$title" -metadata TRCK="$track" \
-        -metadata:s:v title="Picture" "$track $title.mp3"
+        -metadata:s:v title="Picture" "$filename"
 done
 
 rm metadata
