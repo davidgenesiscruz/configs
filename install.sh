@@ -41,5 +41,11 @@ rm -rf gcalcli
 ## imagemagick
 brew install imagemagick
 
+## ffmpeg
+brew install ffmpeg
+
+## scripts
+cp scripts/* /usr/local/bin/
+
 # Instructions
 echo 'Modify KeySetting_Default.plist within /System/Library/Input Methods/JapaneseIM.app for space and half-width space'
