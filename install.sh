@@ -5,9 +5,8 @@ open https://bahoom.com/hyperswitch
 open https://pqrs.org/osx/karabiner/
 open https://clipy-app.com/
 
-# Installations
-## Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# Installation
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 ## Python
 brew install python
